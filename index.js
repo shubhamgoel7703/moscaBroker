@@ -21,7 +21,7 @@ broker.on('published', (packet) => {
     // console.log("published packet", packet)
 
     if (packet.topic == 'vibrationDataTopic') {
-        io.sockets.emit('sendData', Number(message));
+        io.sockets.emit('sendData', message);
     }
 })
 
